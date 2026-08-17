@@ -811,3 +811,1471 @@ footer p {
     font-size:4rem;
 
 }
+
+/* =========================================================
+   HOME PAGE REDESIGN
+   Added for the redesigned Next Gear homepage.
+   These rules are placed at the end so they override older
+   homepage/card styles without changing your course/contact pages.
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------- HOME HERO ---------- */
+
+.home-hero {
+    min-height: 620px;
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(120deg, #050505 0%, #111111 55%, #241010 100%);
+    color: #ffffff;
+}
+
+.home-hero-content {
+    max-width: 720px;
+}
+
+.hero-label,
+.section-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: #ef4444;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.home-hero h1 {
+    margin: 0 0 24px;
+    font-size: clamp(3rem, 6vw, 5.3rem);
+    line-height: 1.02;
+    color: #ffffff;
+}
+
+.home-hero h1 span {
+    color: #ef4444;
+}
+
+.home-hero p {
+    max-width: 650px;
+    margin: 0;
+    color: #dddddd;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 32px 0 26px;
+}
+
+.primary-btn,
+.secondary-btn,
+.light-btn {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 6px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.primary-btn:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(239, 68, 68, 0.3);
+}
+
+.secondary-btn {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    background: transparent;
+}
+
+.secondary-btn:hover {
+    background: #ffffff;
+    color: #111111;
+    transform: translateY(-2px);
+}
+
+.hero-course-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    color: #eeeeee;
+    font-weight: 600;
+}
+
+.hero-course-list span {
+    white-space: nowrap;
+}
+
+.hero-logo-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 340px;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.hero-logo-display img {
+    width: min(100%, 420px);
+    max-height: 360px;
+    object-fit: contain;
+}
+
+/* ---------- QUICK BENEFITS ---------- */
+
+.quick-benefits {
+    position: relative;
+    z-index: 5;
+    width: min(1200px, 90%);
+    margin: -42px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 28px;
+    text-align: left;
+}
+
+.benefit-item:not(:last-child) {
+    border-right: 1px solid #eeeeee;
+}
+
+.benefit-item > span {
+    font-size: 2rem;
+}
+
+.benefit-item h3 {
+    margin: 0 0 6px;
+    color: #111111;
+    font-size: 1.05rem;
+}
+
+.benefit-item p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.92rem;
+}
+
+/* ---------- TRAINING PROGRAMS ---------- */
+
+.courses#programs {
+    padding: 110px 8%;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading > span {
+    color: #ef4444;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin: 10px 0 15px;
+    color: #111111;
+    font-size: 2.7rem;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #666666;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.courses#programs .course-grid {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.courses#programs .course-card {
+    overflow: hidden;
+    background: #ffffff;
+    border: none;
+    border-left: 4px solid #ef4444;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.courses#programs .course-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 38px rgba(239, 68, 68, 0.14);
+}
+
+.course-image-wrapper {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+    background: #111111;
+}
+
+.courses#programs .course-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.courses#programs .course-card:hover .course-image-wrapper img {
+    transform: scale(1.03);
+}
+
+.course-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #ef4444;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+}
+
+.course-image-placeholder {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #050505, #242424);
+}
+
+.course-image-placeholder span {
+    font-size: 5rem;
+}
+
+.course-card-content {
+    padding: 30px;
+}
+
+.courses#programs .course-card-content h3 {
+    margin: 0 0 12px;
+    color: #111111;
+    font-size: 1.7rem;
+}
+
+.courses#programs .course-card-content p {
+    padding: 0;
+    color: #5f5f5f;
+    line-height: 1.7;
+}
+
+.courses#programs .course-card-content ul {
+    margin: 22px 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    color: #444444;
+}
+
+.courses#programs .course-card-content li {
+    position: static;
+    margin: 0;
+    padding: 7px 0;
+}
+
+.courses#programs .course-card-content li::before {
+    content: none;
+}
+
+.courses#programs .course-link {
+    display: inline-block;
+    margin: 5px 0 0;
+    padding: 0;
+    background: transparent;
+    color: #ef4444;
+    border-radius: 0;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: none;
+}
+
+.courses#programs .course-link:hover {
+    background: transparent;
+    color: #dc2626;
+    transform: translateX(3px);
+    box-shadow: none;
+}
+
+.title-with-badge {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.title-with-badge h3 {
+    margin: 0;
+}
+
+.courses#programs .coming-soon {
+    margin: 0;
+    padding: 5px 10px;
+    background: #eeeeee;
+    color: #555555;
+    font-size: 0.74rem;
+}
+
+.disabled-link {
+    display: inline-block;
+    margin-top: 5px;
+    color: #999999;
+    font-weight: 700;
+}
+
+/* ---------- WHY NEXT GEAR ---------- */
+
+.why-nextgear {
+    padding: 100px 8%;
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 80px;
+    background: #ffffff;
+}
+
+.why-content {
+    max-width: 650px;
+}
+
+.why-content > h2 {
+    margin: 5px 0 20px;
+    color: #111111;
+    font-size: 2.7rem;
+}
+
+.why-content > p {
+    margin: 0;
+    color: #666666;
+    font-size: 1.08rem;
+    line-height: 1.75;
+}
+
+.why-list {
+    margin-top: 35px;
+}
+
+.why-item {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.why-item > span {
+    min-width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ef4444;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.why-item h3 {
+    margin: 0 0 5px;
+    color: #111111;
+}
+
+.why-item p {
+    margin: 0;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.why-visual {
+    min-height: 420px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #050505, #221010);
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.why-visual img {
+    width: min(280px, 80%);
+    max-height: 220px;
+    object-fit: contain;
+}
+
+.why-visual h3 {
+    margin: 22px 0 5px;
+    font-size: 1.6rem;
+}
+
+.why-visual p {
+    margin: 0;
+    color: #d5d5d5;
+}
+
+/* ---------- FINAL CTA ---------- */
+
+.career-section {
+    padding: 75px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: #ef4444;
+    color: #ffffff;
+}
+
+.career-section > div {
+    max-width: 750px;
+}
+
+.career-section span {
+    font-size: 0.82rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.career-section h2 {
+    margin: 8px 0 12px;
+    font-size: 2.6rem;
+}
+
+.career-section p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+.light-btn {
+    white-space: nowrap;
+    background: #111111;
+    color: #ffffff;
+}
+
+.light-btn:hover {
+    background: #ffffff;
+    color: #111111;
+    transform: translateY(-2px);
+}
+
+/* ---------- CONTACT STRIP ---------- */
+
+.contact-strip {
+    padding: 35px 8%;
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    background: #111111;
+    color: #ffffff;
+}
+
+.contact-strip > div {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.contact-strip span {
+    font-size: 1.8rem;
+}
+
+.contact-strip p {
+    margin: 0;
+}
+
+.contact-strip small,
+.contact-strip strong {
+    display: block;
+}
+
+.contact-strip small {
+    margin-bottom: 3px;
+    color: #aaaaaa;
+}
+
+/* ---------- ENHANCED HOME FOOTER ---------- */
+
+.footer-content {
+    padding: 45px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background: #050505;
+    color: #ffffff;
+}
+
+.footer-brand img {
+    width: 130px;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.footer-brand p {
+    margin-top: 10px;
+    color: #bdbdbd;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ef4444;
+}
+
+.footer-bottom {
+    padding: 18px;
+    text-align: center;
+    background: #000000;
+    color: #aaaaaa;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* ---------- HOME RESPONSIVE ---------- */
+
+@media (max-width: 900px) {
+    .home-hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 70px 7% 100px;
+    }
+
+    .hero-logo-display {
+        display: none;
+    }
+
+    .quick-benefits {
+        grid-template-columns: 1fr;
+    }
+
+    .benefit-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #eeeeee;
+    }
+
+    .courses#programs .course-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-nextgear {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .career-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-hero {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .home-hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .courses#programs,
+    .why-nextgear {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .section-heading h2,
+    .why-content > h2,
+    .career-section h2 {
+        font-size: 2.05rem;
+    }
+
+    .course-image-wrapper,
+    .course-image-placeholder {
+        height: 210px;
+    }
+
+    .contact-strip {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+/* =========================================================
+   ABOUT PAGE
+========================================================= */
+
+/* HERO */
+
+.about-hero {
+    min-height: 480px;
+    padding: 90px 8%;
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            120deg,
+            #050505 0%,
+            #111111 55%,
+            #241010 100%
+        );
+
+    color: white;
+}
+
+.about-hero-content {
+    max-width: 850px;
+}
+
+.about-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #ef4444;
+
+    font-size: 0.9rem;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.about-hero h1 {
+    margin: 0 0 25px;
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: 1.05;
+}
+
+.about-hero h1 span {
+    color: #ef4444;
+}
+
+.about-hero p {
+    max-width: 700px;
+
+    color: #dddddd;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+}
+
+
+/* WHO WE ARE */
+
+.about-intro {
+    padding: 100px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+
+    gap: 80px;
+
+    background: white;
+}
+
+.about-intro-content {
+    max-width: 750px;
+}
+
+.about-intro-content h2 {
+    margin: 5px 0 25px;
+
+    color: #111;
+
+    font-size: 2.7rem;
+}
+
+.about-intro-content p {
+    margin-bottom: 18px;
+
+    color: #5f5f5f;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+
+/* LOGO CARD */
+
+.about-logo-card {
+    min-height: 400px;
+
+    padding: 50px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #050505,
+            #221010
+        );
+
+    color: white;
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+.about-logo-card img {
+    width: min(280px, 85%);
+
+    max-height: 220px;
+
+    object-fit: contain;
+}
+
+.about-logo-card h3 {
+    margin: 25px 0 5px;
+
+    font-size: 1.6rem;
+}
+
+.about-logo-card p {
+    color: #cccccc;
+}
+
+
+/* MISSION */
+
+.mission-section {
+    padding: 100px 8%;
+
+    background: #f7f7f7;
+}
+
+.mission-heading {
+    max-width: 700px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+}
+
+.mission-heading > span {
+    color: #ef4444;
+
+    font-size: 0.85rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.mission-heading h2 {
+    margin: 10px 0 15px;
+
+    color: #111;
+
+    font-size: 2.7rem;
+}
+
+.mission-heading p {
+    color: #666;
+
+    font-size: 1.05rem;
+
+    line-height: 1.7;
+}
+
+
+/* MISSION CARDS */
+
+.mission-grid {
+    max-width: 1250px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.mission-card {
+    padding: 35px 28px;
+
+    background: white;
+
+    border-top:
+        4px solid #ef4444;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.07);
+
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 16px 35px rgba(239, 68, 68, 0.13);
+}
+
+.mission-icon {
+    margin-bottom: 20px;
+
+    font-size: 2.6rem;
+}
+
+.mission-card h3 {
+    margin-bottom: 12px;
+
+    color: #111;
+}
+
+.mission-card p {
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 0.95rem;
+}
+
+
+/* PROGRAMS */
+
+.about-programs {
+    padding: 100px 8%;
+
+    background: white;
+}
+
+.about-programs-content {
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.about-programs-content > h2 {
+    margin: 5px 0 20px;
+
+    font-size: 2.7rem;
+
+    color: #111;
+}
+
+.about-programs-content > p {
+    max-width: 750px;
+
+    margin-bottom: 40px;
+
+    color: #666;
+
+    font-size: 1.05rem;
+
+    line-height: 1.75;
+}
+
+.about-program-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.about-program {
+    min-height: 100px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    background: #f8f8f8;
+
+    border-left:
+        4px solid #ef4444;
+
+    border-radius: 8px;
+
+    color: #111;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+a.about-program:hover {
+    background: #111;
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+.about-program strong,
+.about-program span {
+    display: block;
+}
+
+.about-program strong {
+    margin-bottom: 5px;
+
+    font-size: 1.25rem;
+}
+
+.about-program div span {
+    color: #777;
+
+    font-size: 0.9rem;
+}
+
+a.about-program:hover div span {
+    color: #cccccc;
+}
+
+
+/* CTA */
+
+.about-cta {
+    padding: 75px 8%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    background: #ef4444;
+
+    color: white;
+}
+
+.about-cta > div:first-child {
+    max-width: 750px;
+}
+
+.about-cta > div > span {
+    font-size: 0.82rem;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.about-cta h2 {
+    margin: 8px 0 12px;
+
+    font-size: 2.6rem;
+}
+
+.about-cta p {
+    line-height: 1.7;
+}
+
+.about-cta-buttons {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.about-primary-btn,
+.about-secondary-btn {
+    padding: 14px 24px;
+
+    border-radius: 6px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition: all 0.3s ease;
+}
+
+.about-primary-btn {
+    background: #111;
+
+    color: white;
+}
+
+.about-primary-btn:hover {
+    background: white;
+
+    color: #111;
+
+    transform: translateY(-2px);
+}
+
+.about-secondary-btn {
+    border: 2px solid white;
+
+    color: white;
+}
+
+.about-secondary-btn:hover {
+    background: white;
+
+    color: #111;
+
+    transform: translateY(-2px);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .mission-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .about-intro {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .about-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-hero {
+        min-height: 400px;
+
+        padding: 70px 6%;
+    }
+
+    .about-hero h1 {
+        font-size: 2.7rem;
+    }
+
+    .about-intro,
+    .mission-section,
+    .about-programs,
+    .about-cta {
+        padding-left: 6%;
+
+        padding-right: 6%;
+    }
+
+    .about-intro-content h2,
+    .mission-heading h2,
+    .about-programs-content > h2,
+    .about-cta h2 {
+        font-size: 2rem;
+    }
+
+    .mission-grid,
+    .about-program-list {
+        grid-template-columns: 1fr;
+    }
+
+    .about-logo-card {
+        min-height: 320px;
+
+        padding: 35px 20px;
+    }
+
+    .about-cta-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .about-primary-btn,
+    .about-secondary-btn {
+        text-align: center;
+    }
+
+}
+/* ==========================
+   BOOKING PAGE
+========================== */
+
+.booking-hero {
+    padding: 90px 8%;
+    text-align: center;
+    background: linear-gradient(
+        120deg,
+        #050505,
+        #181818 60%,
+        #271010
+    );
+    color: white;
+}
+
+.booking-hero > span {
+    color: #ef4444;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.booking-hero h1 {
+    margin: 10px 0 15px;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+}
+
+.booking-hero p {
+    max-width: 700px;
+    margin: auto;
+    color: #dddddd;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+
+/* MAIN BOOKING SECTION */
+
+.booking-section {
+    max-width: 1250px;
+    margin: auto;
+    padding: 90px 5%;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+
+/* LEFT SIDE */
+
+.booking-info h2 {
+    margin: 5px 0 20px;
+    font-size: 2.5rem;
+}
+
+.booking-info > p {
+    margin-bottom: 35px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.booking-benefit {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.booking-icon {
+    min-width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f7f7f7;
+    border-radius: 10px;
+
+    font-size: 1.6rem;
+}
+
+.booking-benefit h3 {
+    margin: 0 0 5px;
+}
+
+.booking-benefit p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.booking-contact-box {
+    margin-top: 40px;
+    padding: 25px;
+
+    border-left: 4px solid #ef4444;
+    border-radius: 8px;
+
+    background: #f7f7f7;
+}
+
+.booking-contact-box p {
+    margin-bottom: 8px;
+    color: #666;
+}
+
+.booking-contact-box a {
+    color: #111;
+    font-size: 1.25rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.booking-contact-box a:hover {
+    color: #ef4444;
+}
+
+
+/* FORM CARD */
+
+.booking-form {
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.1);
+
+    border-top: 5px solid #ef4444;
+}
+
+.booking-form h2 {
+    margin: 0 0 5px;
+    font-size: 2rem;
+}
+
+.booking-form-intro {
+    margin-bottom: 30px;
+    color: #777;
+}
+
+
+/* FORM */
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+
+    color: #222;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #d8d8d8;
+    border-radius: 7px;
+
+    background: white;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    transition: all 0.25s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+
+    border-color: #ef4444;
+
+    box-shadow:
+        0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+
+/* SUBMIT */
+
+.booking-submit-btn {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #ef4444;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.booking-submit-btn:hover {
+    background: #dc2626;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(239, 68, 68, 0.3);
+}
+
+.booking-note {
+    margin: 15px 0 0;
+
+    color: #888;
+
+    font-size: 0.82rem;
+
+    text-align: center;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .booking-section {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .booking-hero {
+        padding: 70px 6%;
+    }
+
+    .booking-section {
+        padding: 60px 5%;
+    }
+
+    .booking-info h2 {
+        font-size: 2rem;
+    }
+
+    .booking-form {
+        padding: 28px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
